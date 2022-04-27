@@ -3535,6 +3535,7 @@
                 let C = Object.keys(z).some((e) => null === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
                     S = ge(!1);
+                console.log(z);
                 function j() {
                     t(5, (P = "settings"));
                 }
