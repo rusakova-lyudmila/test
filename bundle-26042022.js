@@ -1299,7 +1299,6 @@
                 }
             };
             function qe(e) {
-                console.log(e);
                 let o,
                     t,
                     n,
@@ -1385,7 +1384,6 @@
                     { onChange: u = () => {} } = o,
                     { className: p = "" } = o,
                     { contentClassName: _ = "" } = o;
-                console.log('s'); console.log(s); console.log(o);
                 return (
                     (e.$$set = (e) => {
                         (o = i(i({}, o), h(e))),
@@ -1414,7 +1412,6 @@
             }
             var Oe = class extends me {
                 constructor(e) {
-                    console.log('Oe'); console.log(e);
                     super(), de(this, e, Ee, qe, l, { id: 1, value: 0, onChange: 2, className: 3, contentClassName: 4 });
                 }
             };
@@ -2054,7 +2051,7 @@
                         }
                         let s = { id: "data-processing-consent", $$slots: { default: [ro] }, $$scope: { ctx: e } };
                         return (
-                            void 0 !== e[1].consent_state && (s.value = e[1].consent_state === null ? false : e[1].consent_state),
+                            void 0 !== e[1].consent_state && (s.value = e[1].consent_state),
                             (o = new Oe({ props: s })),
                             U.push(() => le(o, "value", i)),
                             {
@@ -3539,7 +3536,6 @@
                 let C = Object.keys(z).some((e) => null === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
                     S = ge(!1);
-                console.log(z);
                 function j() {
                     t(5, (P = "settings"));
                 }
