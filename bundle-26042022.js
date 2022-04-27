@@ -63,7 +63,8 @@
                     (this.onConsent = () => {}), (this.apiService = e), (this.cookieService = o), (this.consent = a.getInitialConsentState()), (this.prevConsent = a.getInitialConsentState());
                 }
                 get isNeedConsent() {
-                    return !this.consent || null === this.consent.gdpr.consent_state || !i.a.getConsentStorageItem() || Object.keys(this.consent.cookie).some((e) => null === this.consent.cookie[e]);
+                    return true;
+                    //return !this.consent || null === this.consent.gdpr.consent_state || !i.a.getConsentStorageItem() || Object.keys(this.consent.cookie).some((e) => null === this.consent.cookie[e]);
                 }
                 get apiUrl() {
                     return this.apiService.url;
