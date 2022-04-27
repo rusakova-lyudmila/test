@@ -313,7 +313,6 @@
         },
         function (e, o, t) {
             "use strict";
-            console.log(t);
             t.r(o),
                 t.d(o, "onConsent", function () {
                     return l;
@@ -1354,7 +1353,7 @@
                                         r(e[2]) && e[2].apply(this, arguments);
                                     }),
                                 ]),
-                                (m = !0)); console.log(t); //console.log(e);
+                                (m = !0));
                     },
                     p(n, [i]) {
                         (e = n),
@@ -1414,7 +1413,6 @@
             }
             var Oe = class extends me {
                 constructor(e) {
-                    console.log(e);
                     super(), de(this, e, Ee, qe, l, { id: 1, value: 0, onChange: 2, className: 3, contentClassName: 4 });
                 }
             };
@@ -3617,6 +3615,7 @@
                 yt = t(8);
             function vt(e, o = () => {}) {
                 const t = fe.a.getInstance();
+				console.log('initial');
                 console.log(t);
                 e.state && Object.assign(t, e.state);
                 const n = e.ui || {},
@@ -3666,6 +3665,7 @@
                         target: n.target || document.getElementById("gdpr-consent-form"),
                         props: Object.assign(Object.assign(Object.assign({}, n), i), { messages: Object.keys(a).reduce((e, o) => ((e[o] = s.translate(a[o])), e), {}) }),
                     });
+					console.log('second');
                     console.log(t);
                     o(null, t);
                 });
