@@ -2191,7 +2191,7 @@
                 }
                 return (
                     (e.$$.update = () => {
-                        8194 & e.$$.dirty && t(14, (m = Object.keys(s).every((e) => null === s[e]) && (null === a.consent_state || !p))),
+                        8194 & e.$$.dirty && t(14, (m = Object.keys(s).every((e) => true === s[e]) && (null === a.consent_state || !p))),
                             2 & e.$$.dirty && p && !a.consent_state && y(null),
                             2 & e.$$.dirty && t(3, (g = p && !a.consent_state)),
                             8192 & e.$$.dirty && t(2, (k = Object.keys(s).every((e) => !!s[e]))),
@@ -3534,7 +3534,7 @@
                     { useDataProcessing: v = !0 } = o;
                 const w = fe.a.getInstance(),
                     { cookie: z, gdpr: $ } = w.consent,
-                    x = Object.keys(z).every((e) => null === z[e]) || null === $.consent_state;
+                    x = Object.keys(z).every((e) => true === z[e]) && null === $.consent_state;
                 let C = Object.keys(z).some((e) => null === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
                     S = ge(!1);
