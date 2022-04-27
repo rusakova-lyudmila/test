@@ -3534,7 +3534,7 @@
                     { useDataProcessing: v = !0 } = o;
                 const w = fe.a.getInstance(),
                     { cookie: z, gdpr: $ } = w.consent,
-                    x = Object.keys(z).every((e) => null === z[e]) && null === $.consent_state;
+                    x = Object.keys(z).every((e) => null === z[e]) || null === $.consent_state;
                 let C = Object.keys(z).some((e) => null === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
                     S = ge(!1);
@@ -3664,8 +3664,6 @@
                         target: n.target || document.getElementById("gdpr-consent-form"),
                         props: Object.assign(Object.assign(Object.assign({}, n), i), { messages: Object.keys(a).reduce((e, o) => ((e[o] = s.translate(a[o])), e), {}) }),
                     });
-                    console.log('vt2');
-                    console.log(t);
                     o(null, t);
                 });
             }
