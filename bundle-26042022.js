@@ -65,6 +65,7 @@
                 get isNeedConsent() {
                     console.log(!this.consent);
                     console.log(!i.a.getConsentStorageItem());
+                    console.log(this.consent.gdpr.consent_state);
                     return !this.consent || null === this.consent.gdpr.consent_state || !i.a.getConsentStorageItem() || Object.keys(this.consent.cookie).some((e) => null === this.consent.cookie[e]);
                 }
                 get apiUrl() {
