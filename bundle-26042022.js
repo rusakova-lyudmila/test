@@ -1351,7 +1351,7 @@
                                         r(e[2]) && e[2].apply(this, arguments);
                                     }),
                                 ]),
-                                (m = !0)); console.log(t); console.log(e);
+                                (m = !0)); console.log(t); //console.log(e);
                     },
                     p(n, [i]) {
                         (e = n),
@@ -1411,6 +1411,7 @@
             }
             var Oe = class extends me {
                 constructor(e) {
+                    console.log(e);
                     super(), de(this, e, Ee, qe, l, { id: 1, value: 0, onChange: 2, className: 3, contentClassName: 4 });
                 }
             };
