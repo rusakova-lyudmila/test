@@ -2678,15 +2678,13 @@
                 return (n[24] = o[t].id), (n[25] = o[t].cookieId), (n[26] = o[t].checkboxText), (n[27] = o[t].content), (n[28] = o), (n[29] = t), n;
             }
             function Go(e) {
-			console.log('go');
-			console.log(e);
                 let o, t, n;
                 function i(o) {
                     e[14].call(null, o, e[25]);
                 }
                 let s = { id: e[24], disabled: e[7], $$slots: { default: [Vo] }, $$scope: { ctx: e } };
                 return (
-                    void 0 !== e[2][e[25]] && (s.value = e[2][e[25]]),
+                    void 0 !== e[2][e[25]] && (s.value = e[2][e[25]] ?? false),
                     (o = new Oe({ props: s })),
                     U.push(() => le(o, "value", i)),
                     {
@@ -2738,8 +2736,6 @@
                 );
             }
             function Jo(e) {
-			console.log('jo');
-			console.log(e);
                 let o, t, n;
                 function i(o) {
                     e[13].call(null, o);
