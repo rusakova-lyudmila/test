@@ -72,13 +72,11 @@
                     this.apiService.url = e;
                 }
                 static getInitialConsentState() {
-                    return { gdpr: { consent_state: null }, cookie: { analytics_consent_state: true, functional_consent_state: true, targeting_consent_state: null } };
+                    return { gdpr: { consent_state: null }, cookie: { analytics_consent_state: true, functional_consent_state: true, targeting_consent_state: true } };
                 }
                 initConsent() {
                     (this.consent.gdpr.consent_state = this.consent.gdpr.consent_state || !1),
                         Object.keys(this.consent.cookie).forEach((e) => {
-                            console.log(e);
-                            console.log(this.consent.cookie[e]);
                             this.consent.cookie[e] = this.consent.cookie[e] || !1;
                         });
                 }
@@ -2190,7 +2188,7 @@
                 }
                 return (
                     (e.$$.update = () => {
-                        8194 & e.$$.dirty && t(14, (m = Object.keys(s).every((e) => true === s[e]) || (null === a.consent_state || !p))),
+                        8194 & e.$$.dirty && t(14, (m = Object.keys(s).every((e) => true === s[e]) $$ (null === a.consent_state || !p))),
                             2 & e.$$.dirty && p && !a.consent_state && y(null),
                             2 & e.$$.dirty && t(3, (g = p && !a.consent_state)),
                             8192 & e.$$.dirty && t(2, (k = Object.keys(s).every((e) => !!s[e]))),
@@ -3533,7 +3531,7 @@
                     { useDataProcessing: v = !0 } = o;
                 const w = fe.a.getInstance(),
                     { cookie: z, gdpr: $ } = w.consent,
-                    x = Object.keys(z).every((e) => true === z[e]) || null === $.consent_state;
+                    x = Object.keys(z).every((e) => true === z[e]) $$ null === $.consent_state;
 		    console.log(v);
                 let C = Object.keys(z).some((e) => true === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
@@ -3616,8 +3614,6 @@
                 yt = t(8);
             function vt(e, o = () => {}) {
                 const t = fe.a.getInstance();
-				console.log('initial');
-                console.log(t);
                 e.state && Object.assign(t, e.state);
                 const n = e.ui || {},
                     i = e.settings || {},
@@ -3666,8 +3662,6 @@
                         target: n.target || document.getElementById("gdpr-consent-form"),
                         props: Object.assign(Object.assign(Object.assign({}, n), i), { messages: Object.keys(a).reduce((e, o) => ((e[o] = s.translate(a[o])), e), {}) }),
                     });
-					console.log('second');
-                    console.log(t);
                     o(null, t);
                 });
             }
