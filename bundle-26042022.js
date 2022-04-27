@@ -204,6 +204,7 @@
                     t.expires && t.expires.toUTCString && (t.expires = t.expires.toUTCString());
                     let n = encodeURIComponent(e) + "=" + encodeURIComponent(o);
                     Object.keys(t).forEach((e) => {
+                        console.log(e);
                         n += "; " + e;
                         const o = t[e];
                         !0 !== o && (n += "=" + o);
@@ -1298,6 +1299,7 @@
                 }
             };
             function qe(e) {
+                console.log(e);
                 let o,
                     t,
                     n,
