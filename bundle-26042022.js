@@ -1294,7 +1294,6 @@
             }
             var Ne = class extends me {
                 constructor(e) {
-                    console.log(e);
                     super(), de(this, e, Le, Ie, l, { appearance: 0, onClick: 1, isLoading: 2, loadingText: 3 });
                 }
             };
@@ -2679,6 +2678,8 @@
                 return (n[24] = o[t].id), (n[25] = o[t].cookieId), (n[26] = o[t].checkboxText), (n[27] = o[t].content), (n[28] = o), (n[29] = t), n;
             }
             function Go(e) {
+			console.log('go');
+			console.log(e);
                 let o, t, n;
                 function i(o) {
                     e[14].call(null, o, e[25]);
@@ -2737,6 +2738,8 @@
                 );
             }
             function Jo(e) {
+			console.log('jo');
+			console.log(e);
                 let o, t, n;
                 function i(o) {
                     e[13].call(null, o);
