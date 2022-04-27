@@ -72,7 +72,7 @@
                     this.apiService.url = e;
                 }
                 static getInitialConsentState() {
-                    return { gdpr: { consent_state: null }, cookie: { analytics_consent_state: true, functional_consent_state: true, targeting_consent_state: null } };
+                    return { gdpr: { consent_state: null }, cookie: { analytics_consent_state: null, functional_consent_state: null, targeting_consent_state: null } };
                 }
                 initConsent() {
                     (this.consent.gdpr.consent_state = this.consent.gdpr.consent_state || !1),
@@ -166,7 +166,6 @@
             class n {
                 constructor() {
                     this.optionalCookies = t(9);
-			console.log(this.optionalCookies);
                 }
                 getConsentCookie() {
                     return n.getCookie(n.consentCookieName);
@@ -350,7 +349,7 @@
         },
         function (e) {
             e.exports = JSON.parse(
-                '[{"name":"corpsite_visit","type":"analytical"},{"name":"ajs_anonymous_id","type":"analytical"},{"name":"pa_visit","type":"analytical"},{"name":"first_visit","type":"analytical"},{"name":"intercom-session-mdu5r5f6","type":"analytical"},{"name":"_gid","type":"analytical"},{"name":"_gcl_au","type":"analytical"},{"name":"_ga","type":"analytical"},{"reg":"_gat_.*","type":"analytical"},{"name":"__insp_wid","type":"analytical"},{"name":"__insp_targlpu","type":"analytical"},{"name":"__insp_targlpt","type":"analytical"},{"name":"__insp_slim","type":"analytical"},{"name":"__insp_nv","type":"analytical"},{"name":"__insp_norec_sess","type":"analytical"},{"name":"__insp_identity","type":"analytical"},{"reg":"_dc_gtm_.*","type":"analytical"},{"name":"wcs_bt","type":"analytical"},{"name":"_ym_uid","type":"analytical"},{"name":"yandexuid","type":"analytical"},{"name":"_ym_d","type":"analytical"},{"name":"i","type":"analytical"},{"name":"yabs-sid","type":"analytical"},{"name":"_gat","type":"analytical"},{"name":"utm_medium","type":"analytical"},{"name":"utm_source","type":"analytical"},{"name":"utm_term","type":"analytical"},{"name":"utm_content","type":"analytical"},{"name":"HSID","type":"analytical"},{"name":"SAPISID","type":"analytical"},{"name":"BizoID","type":"analytical"},{"name":"UserMatchHistory","type":"analytical"},{"name":"__cfduid","type":"analytical"},{"name":"__insp_norec_howoften","type":"analytical"},{"name":"APISID","type":"analytical"},{"name":"SIDCC","type":"analytical"},{"name":"_ym_isad","type":"functional"},{"name":"NID","type":"functional"},{"name":"ATN","type":"functional"},{"name":"AA003","type":"functional"},{"name":"GPS","type":"functional"},{"name":"LOGIN_INFO","type":"functional"},{"reg":"_ym_visorc_*","type":"functional"},{"name":"JSESSIONID","type":"functional"},{"name":"SSID","type":"functional"},{"name":"VISITOR_INFO1_LIVE","type":"functional"},{"name":"YSC","type":"functional"},{"name":"PREF","type":"functional"},{"name":"lang","type":"functional"},{"name":"locale","type":"functional"},{"name":"hideCookieNotify","type":"functional"},{"name":"hideSupportMessage","type":"functional"},{"name":"userType","type":"functional"},{"name":"hideUserTypeOption","type":"functional"},{"name":"hideUserTypeNotify","type":"functional"},{"name":"hideGamerSupportMessage","type":"functional"},{"name":"fontsPrimaryLoaded","type":"functional"},{"name":"fontsSecondaryLoaded","type":"functional"},{"name":"fontsCyrillicLoaded","type":"functional"},{"name":"fontsKoreanLoaded","type":"functional"},{"name":"ajs_group_id","type":"targeting"},{"name":"_derived_epik","type":"targeting"},{"name":"__hssc","type":"targeting"},{"name":"__hssrc","type":"targeting"},{"name":"__hstc","type":"targeting"}]'
+                '[{"name":"corpsite_visit","type":"analytical"},{"name":"ajs_anonymous_id","type":"analytical"},{"name":"pa_visit","type":"analytical"},{"name":"first_visit","type":"analytical"},{"name":"intercom-session-mdu5r5f6","type":"analytical"},{"name":"_gid","type":"analytical"},{"name":"_gcl_au","type":"analytical"},{"name":"_ga","type":"analytical"},{"reg":"_gat_.*","type":"analytical"},{"name":"__insp_wid","type":"analytical"},{"name":"__insp_targlpu","type":"analytical"},{"name":"__insp_targlpt","type":"analytical"},{"name":"__insp_slim","type":"analytical"},{"name":"__insp_nv","type":"analytical"},{"name":"__insp_norec_sess","type":"analytical"},{"name":"__insp_identity","type":"analytical"},{"reg":"_dc_gtm_.*","type":"analytical"},{"name":"wcs_bt","type":"analytical"},{"name":"_ym_uid","type":"analytical"},{"name":"yandexuid","type":"analytical"},{"name":"_ym_d","type":"analytical"},{"name":"i","type":"analytical"},{"name":"yabs-sid","type":"analytical"},{"name":"_gat","type":"analytical"},{"name":"utm_medium","type":"analytical"},{"name":"utm_source","type":"analytical"},{"name":"utm_term","type":"analytical"},{"name":"utm_content","type":"analytical"},{"name":"HSID","type":"analytical"},{"name":"SAPISID","type":"analytical"},{"name":"BizoID","type":"analytical"},{"name":"UserMatchHistory","type":"analytical"},{"name":"__cfduid","type":"analytical"},{"name":"__insp_norec_howoften","type":"analytical"},{"name":"APISID","type":"analytical"},{"name":"SIDCC","type":"analytical"},{"name":"_ym_isad","type":"analytical"},{"name":"NID","type":"functional"},{"name":"ATN","type":"functional"},{"name":"AA003","type":"functional"},{"name":"GPS","type":"functional"},{"name":"LOGIN_INFO","type":"functional"},{"reg":"_ym_visorc_*","type":"functional"},{"name":"JSESSIONID","type":"functional"},{"name":"SSID","type":"functional"},{"name":"VISITOR_INFO1_LIVE","type":"functional"},{"name":"YSC","type":"functional"},{"name":"PREF","type":"functional"},{"name":"lang","type":"functional"},{"name":"locale","type":"functional"},{"name":"hideCookieNotify","type":"functional"},{"name":"hideSupportMessage","type":"functional"},{"name":"userType","type":"functional"},{"name":"hideUserTypeOption","type":"functional"},{"name":"hideUserTypeNotify","type":"functional"},{"name":"hideGamerSupportMessage","type":"functional"},{"name":"fontsPrimaryLoaded","type":"functional"},{"name":"fontsSecondaryLoaded","type":"functional"},{"name":"fontsCyrillicLoaded","type":"functional"},{"name":"fontsKoreanLoaded","type":"functional"},{"name":"ajs_group_id","type":"targeting"},{"name":"_derived_epik","type":"targeting"},{"name":"__hssc","type":"targeting"},{"name":"__hssrc","type":"targeting"},{"name":"__hstc","type":"targeting"}]'
             );
         },
         function (e, o, t) {
@@ -2189,7 +2188,7 @@
                 }
                 return (
                     (e.$$.update = () => {
-                        8194 & e.$$.dirty && t(14, (m = Object.keys(s).every((e) => true === s[e]) && (null === a.consent_state || !p))),
+                        8194 & e.$$.dirty && t(14, (m = Object.keys(s).every((e) => null === s[e]) && (null === a.consent_state || !p))),
                             2 & e.$$.dirty && p && !a.consent_state && y(null),
                             2 & e.$$.dirty && t(3, (g = p && !a.consent_state)),
                             8192 & e.$$.dirty && t(2, (k = Object.keys(s).every((e) => !!s[e]))),
@@ -3532,11 +3531,10 @@
                     { useDataProcessing: v = !0 } = o;
                 const w = fe.a.getInstance(),
                     { cookie: z, gdpr: $ } = w.consent,
-                    x = Object.keys(z).every((e) => true === z[e]) && null === $.consent_state;
-                let C = Object.keys(z).some((e) => true === z[e]) || (v && null === $.consent_state),
+                    x = Object.keys(z).every((e) => null === z[e]) && null === $.consent_state;
+                let C = Object.keys(z).some((e) => null === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
                     S = ge(!1);
-		    console.log(z);
                 function j() {
                     t(5, (P = "settings"));
                 }
