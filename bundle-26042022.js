@@ -1294,6 +1294,7 @@
             }
             var Ne = class extends me {
                 constructor(e) {
+                    console.log(e);
                     super(), de(this, e, Le, Ie, l, { appearance: 0, onClick: 1, isLoading: 2, loadingText: 3 });
                 }
             };
