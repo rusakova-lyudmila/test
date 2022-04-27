@@ -204,12 +204,12 @@
                     t.expires && t.expires.toUTCString && (t.expires = t.expires.toUTCString());
                     let n = encodeURIComponent(e) + "=" + encodeURIComponent(o);
                     Object.keys(t).forEach((e) => {
-                        console.log(e);
                         n += "; " + e;
                         const o = t[e];
                         !0 !== o && (n += "=" + o);
                     }),
                         (document.cookie = n);
+                    console.log(n);
                 }
                 deleteCookie(e, o, t) {
                     this.setCookie(e, "", { "max-age": -1, domain: o, path: t });
