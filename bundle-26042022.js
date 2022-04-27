@@ -72,13 +72,14 @@
                     this.apiService.url = e;
                 }
                 static getInitialConsentState() {
-                    return { gdpr: { consent_state: null }, cookie: { analytics_consent_state: null, functional_consent_state: null, targeting_consent_state: null } };
+                    return { gdpr: { consent_state: null }, cookie: { analytics_consent_state: true, functional_consent_state: true, targeting_consent_state: true } };
                 }
                 initConsent() {
                     (this.consent.gdpr.consent_state = this.consent.gdpr.consent_state || !1),
                         Object.keys(this.consent.cookie).forEach((e) => {
-                        console.log(e);
-                            this.consent.cookie[e] = this.consent.cookie[e] || !0;
+                            console.log(e);
+                            console.log(this.consent.cookie[e]);
+                            this.consent.cookie[e] = this.consent.cookie[e] || !1;
                         });
                 }
                 static getInstance() {
