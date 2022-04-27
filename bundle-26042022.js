@@ -3616,6 +3616,7 @@
                 yt = t(8);
             function vt(e, o = () => {}) {
                 const t = fe.a.getInstance();
+                console.log(t);
                 e.state && Object.assign(t, e.state);
                 const n = e.ui || {},
                     i = e.settings || {},
@@ -3659,6 +3660,7 @@
                         privacyPolicyLinkName: "privacy_policy_link_name",
                     };
                 t.sync(null, null, (e) => {
+                    console.log(e);
                     if (e) return void o(e);
                     const t = new ft({
                         target: n.target || document.getElementById("gdpr-consent-form"),
