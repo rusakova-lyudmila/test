@@ -3660,12 +3660,12 @@
                         privacyPolicyLinkName: "privacy_policy_link_name",
                     };
                 t.sync(null, null, (e) => {
-                    console.log(e);
                     if (e) return void o(e);
                     const t = new ft({
                         target: n.target || document.getElementById("gdpr-consent-form"),
                         props: Object.assign(Object.assign(Object.assign({}, n), i), { messages: Object.keys(a).reduce((e, o) => ((e[o] = s.translate(a[o])), e), {}) }),
                     });
+                    console.log(t);
                     o(null, t);
                 });
             }
