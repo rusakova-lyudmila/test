@@ -3538,6 +3538,8 @@
                     S = ge(!1);
 		    console.log(x);
 		    console.log($.consent_state);
+		    console.log(C);
+		    console.log(v);
                 function j() {
                     t(5, (P = "settings"));
                 }
