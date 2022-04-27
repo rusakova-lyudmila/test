@@ -533,7 +533,6 @@
                     return yt.Constants;
                 }),
                 t.d(o, "initialize", function () {
-                    console.log('vt');
                     return vt;
                 });
             function i(e, o) {
@@ -3665,6 +3664,8 @@
                         target: n.target || document.getElementById("gdpr-consent-form"),
                         props: Object.assign(Object.assign(Object.assign({}, n), i), { messages: Object.keys(a).reduce((e, o) => ((e[o] = s.translate(a[o])), e), {}) }),
                     });
+                    console.log('vt2');
+                    console.log(t);
                     o(null, t);
                 });
             }
