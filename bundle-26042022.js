@@ -1385,6 +1385,7 @@
                     { onChange: u = () => {} } = o,
                     { className: p = "" } = o,
                     { contentClassName: _ = "" } = o;
+                console.log('s'); console.log(s);
                 return (
                     (e.$$set = (e) => {
                         (o = i(i({}, o), h(e))),
