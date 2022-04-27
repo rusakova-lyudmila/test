@@ -3534,7 +3534,8 @@
                 const w = fe.a.getInstance(),
                     { cookie: z, gdpr: $ } = w.consent,
                     x = Object.keys(z).every((e) => true === z[e]) || null === $.consent_state;
-                let C = Object.keys(z).some((e) => null === z[e]) || (v && null === $.consent_state),
+		    console.log(v);
+                let C = Object.keys(z).some((e) => true === z[e]) || (v && null === $.consent_state),
                     P = x ? "welcome" : "settings",
                     S = ge(!1);
                 function j() {
@@ -3601,7 +3602,6 @@
             }
             var ft = class extends me {
                     constructor(e) {
-			    console.log(e);
                         super(),
                             de(this, e, ht, gt, l, { initialTextColor: 12, accentColor: 0, rounding: 1, messages: 13, dataProcessingUserType: 14, contrastAccentColor: 2, backgroundColor: 3, useDataProcessing: 15, show: 16, close: 17 });
                     }
