@@ -2054,7 +2054,7 @@
                         }
                         let s = { id: "data-processing-consent", $$slots: { default: [ro] }, $$scope: { ctx: e } };
                         return (
-                            void 0 !== e[1].consent_state && (s.value = e[1].consent_state),
+                            void 0 !== e[1].consent_state && (s.value = e[1].consent_state === null ? false : e[1].consent_state),
                             (o = new Oe({ props: s })),
                             U.push(() => le(o, "value", i)),
                             {
