@@ -3601,6 +3601,7 @@
             }
             var ft = class extends me {
                     constructor(e) {
+			    console.log(e);
                         super(),
                             de(this, e, ht, gt, l, { initialTextColor: 12, accentColor: 0, rounding: 1, messages: 13, dataProcessingUserType: 14, contrastAccentColor: 2, backgroundColor: 3, useDataProcessing: 15, show: 16, close: 17 });
                     }
