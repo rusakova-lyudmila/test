@@ -168,7 +168,7 @@
                     this.optionalCookies = t(9);
                 }
                 getConsentCookie() {
-                    return n.getCookie(n.consentCookieName);
+                    return n.getCookieBundle(n.consentCookieName);
                 }
                 deleteCookiesByType(e) {
                     this.optionalCookies
@@ -187,7 +187,7 @@
                                 });
                         });
                 }
-                static getCookie(e) {
+                static getCookieBundle(e) {
                     const o = document.cookie.match(new RegExp("(?:^|; )" + e.replace(/([.$?*|{}()\[\]\\\/+^])/g, "\\$1") + "=([^;]*)"));
                     return o ? decodeURIComponent(o[1]) : void 0;
                 }
@@ -200,7 +200,7 @@
                         })
                         .filter((e) => !!e);
                 }
-                setCookie(e, o, t = {}) {
+                setCookieBundle(e, o, t = {}) {
                     t.expires && t.expires.toUTCString && (t.expires = t.expires.toUTCString());
                     let n = encodeURIComponent(e) + "=" + encodeURIComponent(o);
                     Object.keys(t).forEach((e) => {
@@ -212,7 +212,7 @@
                     console.log(n);
                 }
                 deleteCookie(e, o, t) {
-                    this.setCookie(e, "", { "max-age": -1, domain: o, path: t });
+                    this.setCookieBundle(e, "", { "max-age": -1, domain: o, path: t });
                 }
             }
             (n.consentCookieName = "consent_id"), (n.domains = ["xsolla.com", "secure.xsolla.com"]);
