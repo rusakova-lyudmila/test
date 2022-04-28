@@ -110,10 +110,6 @@
                             i.a.setConsentStorageItem(o.consent_id),
                             this.isNeedConsent ||
                                 (Object.keys(this.consent.cookie)
-									.forEach((e) => {
-										console.log(e);
-										console.log(this.consent.cookie[e]);
-                                    })
                                     .filter((e) => !this.consent.cookie[e])
                                     .forEach((e) => {
 										console.log(e);
