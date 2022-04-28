@@ -110,7 +110,7 @@
                             i.a.setConsentStorageItem(o.consent_id),
                             this.isNeedConsent ||
                                 (Object.keys(this.consent.cookie)
-                                    .filter((e) => this.consent.cookie[e])
+                                    .filter((e) => !this.consent.cookie[e])
                                     .forEach((e) => {
 										console.log(e);
                                         this.cookieService.deleteCookiesByType(a.stateTypeToCookieType(e));
